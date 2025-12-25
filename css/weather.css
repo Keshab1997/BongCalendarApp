@@ -1,0 +1,94 @@
+.weather-card {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+    text-align: center;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.weather-icon {
+    font-size: 40px;
+}
+
+.weather-body h2 {
+    font-size: 48px;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.weather-body p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.weather-footer {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+    font-size: 14px;
+}
+/* আপনার আগের weather-card CSS যেমন আছে তেমনই থাকবে */
+
+/* নতুন ফোরকাস্ট কন্টেইনার */
+.forecast-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* হালকা শ্যাডো */
+    margin-bottom: 80px; /* নিচে স্পেস যাতে মেনু বারে ঢাকা না পড়ে */
+}
+
+.forecast-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* প্রতিটি দিনের স্টাইল */
+.daily-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.daily-item:last-child {
+    border-bottom: none; /* শেষেরটায় বর্ডার থাকবে না */
+}
+
+/* বারের নাম (যেমন: সোম, মঙ্গল) */
+.day-name {
+    font-weight: 500;
+    color: #444;
+    width: 60px; /* ফিক্সড উইডথ */
+}
+
+/* ছোট আইকন */
+.small-icon {
+    font-size: 24px;
+}
+
+/* তাপমাত্রা (Max / Min) */
+.temp-range {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.min-temp {
+    color: #999;
+    font-size: 13px;
+    margin-left: 5px;
+}

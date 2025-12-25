@@ -1,0 +1,26 @@
+<!-- components/news.html -->
+
+<div class="news-section">
+    <div class="news-header">
+        <h2>📰 খবরের দুনিয়া</h2>
+    </div>
+
+    <!-- ক্যাটাগরি ট্যাব -->
+    <div class="news-tabs">
+        <!-- ১. রাজ্য -->
+        <button class="tab-btn active-tab" onclick="switchCategory('West Bengal News', this)">রাজ্য</button>
+        
+        <!-- ২. নতুন সংযোজন: কর্মক্ষেত্র -->
+        <button class="tab-btn" onclick="switchCategory('West Bengal Govt Job Recruitment', this)">💼 কর্মক্ষেত্র</button>
+        
+        <!-- ৩. অন্যান্য -->
+        <button class="tab-btn" onclick="switchCategory('India News', this)">দেশ</button>
+        <button class="tab-btn" onclick="switchCategory('Kolkata Sports', this)">খেলা</button>
+        <button class="tab-btn" onclick="switchCategory('Tollywood', this)">বিনোদন</button>
+    </div>
+
+    <!-- নিউজের লিস্ট -->
+    <div id="news-list" class="news-grid">
+        <!-- এখানে খবর লোড হবে -->
+    </div>
+</div>

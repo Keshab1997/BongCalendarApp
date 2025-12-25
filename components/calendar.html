@@ -1,0 +1,43 @@
+<!-- components/calendar.html -->
+<div class="calendar-wrapper">
+    
+    <!-- ১. মেইন ডেট কার্ড (রঙিন বক্স) -->
+    <div class="date-card">
+        <div class="header-date">আজকের তারিখ</div>
+        
+        <!-- বাংলা তারিখ -->
+        <div class="bangla-section">
+            <h1 id="bn-day">...</h1>
+            <h3 id="bn-month-year">...</h3>
+            <p id="bn-season" class="season-text">...</p>
+        </div>
+
+        <hr>
+
+        <!-- ইংরেজি তারিখ -->
+        <div class="english-section">
+            <span id="en-date">Loading...</span>
+            <span id="en-dayname">...</span>
+        </div>
+    </div>
+
+   <!-- components/calendar.html -->
+<div class="info-card">
+    <h3>✨ আজকের সময়সূচি <span style="font-size:10px; font-weight:normal; color:green;" id="loc-status"></span></h3>
+    <ul class="time-list">
+        <li>🌞 সূর্যোদয়: <span id="val-sunrise">খোঁজা হচ্ছে...</span></li>
+        <li>🌚 সূর্যাস্ত: <span id="val-sunset">খোঁজা হচ্ছে...</span></li>
+        <li>⭐ শুভ সময়: <span id="val-shuvo">বার অনুযায়ী...</span></li>
+    </ul>
+</div>
+
+    <!-- ৩. উৎসব ও ছুটির তালিকা (অটোমেটিক লোড হবে) -->
+    <div class="festival-section">
+        <h3>🎉 এই মাসের উৎসব ও ছুটি</h3>
+        <ul id="festival-list" class="festival-list">
+            <!-- JS দিয়ে এখানে লিস্ট লোড হবে -->
+            <li style="text-align:center; color:#888;">লোড হচ্ছে...</li>
+        </ul>
+    </div>
+
+</div>

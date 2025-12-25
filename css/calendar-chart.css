@@ -1,0 +1,192 @@
+/* css/calendar-chart.css */
+
+.chart-wrapper {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.chart-header h3 {
+    margin: 0;
+    color: #d32f2f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chart-header button {
+    background: white;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.chart-header button:hover {
+    background: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+}
+
+/* গ্রিড সিস্টেম */
+.weekdays-grid, .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 8px; /* মাঝখানের গ্যাপ */
+}
+
+.weekdays-grid div {
+    font-weight: bold;
+    color: #555;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+/* তারিখের বক্স ডিজাইন */
+.days-grid div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 8px 2px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* উপর-নিচে সাজানো */
+    align-items: center;
+    justify-content: center;
+    min-height: 50px; /* হাইট ফিক্সড */
+    transition: all 0.2s;
+}
+
+.days-grid div:hover {
+    background-color: #ffebee;
+    border-color: #ffcdd2;
+    transform: scale(1.05);
+}
+
+/* ইংরেজি তারিখের স্টাইল */
+.en-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+}
+
+/* বাংলা তারিখের স্টাইল */
+.bn-date {
+    font-size: 11px;
+    color: #d32f2f; /* লাল রং */
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* আজকের তারিখ হাইলাইট */
+.today-active {
+    background: linear-gradient(135deg, #ff6b6b, #ee5253) !important;
+    border-color: #ee5253 !important;
+    color: white !important;
+}
+
+.today-active .en-date, .today-active .bn-date {
+    color: white !important;
+}
+/* css/calendar-chart.css */
+
+/* আগের কোডগুলো থাকবে... এর নিচে এগুলো যোগ করুন */
+
+/* ১. রবিবার লাল রঙের হবে */
+.is-sunday .en-date {
+    color: #d32f2f !important;
+}
+
+/* ২. উৎসব বা ছুটির দিন (হালকা সবুজ ব্যাকগ্রাউন্ড) */
+.has-event {
+    background-color: #e8f5e9 !important;
+    border-color: #a5d6a7 !important;
+    position: relative;
+}
+
+/* উৎসব থাকলে একটা ছোট ডট বা চিহ্ন */
+.has-event::after {
+    content: '★';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: #2e7d32;
+}
+
+/* ৩. পপ-আপ মোডাল ডিজাইন */
+.modal-overlay {
+    display: none; /* ডিফল্ট লুকানো */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* কালো আবছা ব্যাকগ্রাউন্ড */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideUp 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+#modal-date {
+    margin: 0;
+    color: #333;
+    font-size: 22px;
+}
+
+#modal-bn-date {
+    margin: 5px 0 15px;
+    color: #d32f2f;
+    font-weight: normal;
+}
+
+.modal-divider {
+    height: 1px;
+    background: #eee;
+    margin: 10px 0;
+}
+
+#modal-event-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* অ্যানিমেশন */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); } to { transform: translateY(0); } }

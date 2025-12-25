@@ -1,0 +1,52 @@
+/* হেডার কন্টেইনার */
+.app-header {
+    background-color: #ffffff;
+    padding: 25px 20px 20px 20px; /* উপরে-নিচে একটু জায়গা */
+    border-bottom-left-radius: 24px; /* নিচে রাউন্ড শেপ */
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* হালকা শ্যাডো */
+    font-family: 'Hind Siliguri', sans-serif;
+    text-align: left; /* বাম দিকে এলাইনমেন্ট */
+}
+
+/* শিরোনাম (Bong Calendar) */
+.app-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    margin-bottom: 2px; /* টাইটেল এবং ট্যাগলাইনের মাঝের গ্যাপ */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* ইমোজি এবং লেখার মাঝে গ্যাপ */
+}
+
+/* ট্যাগলাইন: "আপনার প্রতিদিনের সঙ্গী" */
+.app-header p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.3px;
+    
+    /* সুন্দর লাল-গোলাপি টেক্সট কালার */
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* ট্যাগলাইনের নিচে ছোট্ট একটি দাগ (Design Element) */
+.app-header p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px; /* দাগটি কতটুকু লম্বা হবে */
+    height: 3px;
+    background: #ff4b2b; /* দাগের কালার */
+    border-radius: 10px;
+    opacity: 0.6;
+}

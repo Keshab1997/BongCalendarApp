@@ -1,0 +1,67 @@
+/* css/header.css */
+
+.app-header {
+    background-color: #ffffff;
+    padding: 25px 20px 20px 20px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Hind Siliguri', sans-serif;
+    
+    /* পরিবর্তন: সব কিছু সেন্টারে আনার জন্য */
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* শিরোনাম (Bong Calendar) */
+.app-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    margin-bottom: 5px;
+    
+    /* পরিবর্তন: ফ্লেক্স আইটেম সেন্টারে আনার জন্য */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 8px;
+    width: 100%;
+}
+
+/* ট্যাগলাইন: "আপনার প্রতিদিনের সঙ্গী" */
+.app-header p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.3px;
+    
+    /* গ্রেডিয়েন্ট কালার */
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px; /* দাগের জন্য নিচে একটু জায়গা */
+}
+
+/* ট্যাগলাইনের নিচের দাগটি সেন্টারে আনার লজিক */
+.app-header p::after {
+    content: '';
+    position: absolute;
+    
+    /* এই ৩টি লাইন দাগটিকে লেখার ঠিক মাঝখানে আনবে */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    
+    width: 40px; /* দাগের সাইজ */
+    height: 3px;
+    background: #ff4b2b;
+    border-radius: 10px;
+    opacity: 0.6;
+}
